@@ -2,8 +2,6 @@
 # _*_ coding:utf-8 _*_
 
 
-from urllib.request import urlopen
-from bs4 import BeautifulSoup as bs
 from practices.get_title import get_title
 import ssl,re
 

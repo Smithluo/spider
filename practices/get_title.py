@@ -23,11 +23,12 @@ def get_title(url):
     return bs_obj
 
 
-title = get_title("https://en.wikipedia.org/wiki/Main_Page")
-if title is None:
-    print("Title could not be found")
-else:
-    print(title)
+def get_print():
+    title = get_title("https://en.wikipedia.org/wiki/Main_Page").title.string
+    if title is None:
+        return "Title could not be found"
+    else:
+        return title
 
 
 # 在 getTitle 函数里面，我们像前面那样检查了 HTTPError，
