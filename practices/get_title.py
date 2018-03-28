@@ -17,11 +17,10 @@ def get_title(url):
     except HTTPError as e:
         return None
     try:
-        bs_obj = bs(html.read(), "html.parser")
-        title = bs_obj.title.string
+        bs_obj = bs(html, "html.parser")
     except AttributeError as e:
         return None
-    return title
+    return bs_obj
 
 
 title = get_title("https://en.wikipedia.org/wiki/Main_Page")
